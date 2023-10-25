@@ -1,5 +1,7 @@
 package studio6;
 
+import java.util.Arrays;
+
 import edu.princeton.cs.introcs.StdDraw;
 
 public class RecursiveMethods {
@@ -48,10 +50,21 @@ public class RecursiveMethods {
 	 * @param array the array to create a reverse of, not to be mutated
 	 * @return an array with the same data as the input but it reverse order
 	 */
+	public static int[] helper(int []array, int index, int []reverseArray ) {
+	
+		toReversed(index);
+		return reverseArray;
+		
+	}
 	public static int[] toReversed(int[] array) {
+		int [] reverseArray = new int [array.length];
+		reverseArray = Arrays.copyOf(array, array.length);
+		helper(array, array.length, reverseArray);
+	
 		
 			// FIXME create a helper method that can recursively reverse the given array
 			return new int[0];
+			
 		
 	}
 
